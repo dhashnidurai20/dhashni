@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dhashni R | ECE Student & Aspiring Innovator</title>
+<meta name="description" content="Portfolio of Dhashni R, an Electronics and Communication Engineering student at M. Kumarasamy College of Engineering, Karur.">
+<style>
+:root{--bg:#f6f3ea;--fg:#0a0a0a;--card:#fff;--dark:#0a0a0a;--on-dark:#f6f3ea;--acc:#f7a935;--line:rgba(0,0,0,.18)}
+:root[data-theme=dark]{--bg:#0d0f1a;--fg:#f6f3ea;--card:#171a2b;--dark:#000;--on-dark:#f6f3ea;--line:rgba(255,255,255,.2)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2{font-weight:800;letter-spacing:-.05em;line-height:.88}
+h1{font-size:clamp(64px,13vw,168px)}
+h2{font-size:clamp(44px,8vw,104px);margin-bottom:40px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:28px;height:64px}
+.logo{font-weight:900;font-size:26px;letter-spacing:-.08em;text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none;padding:0;margin:0 auto;font-size:14px}
+nav ul a{text-decoration:none}nav ul a:hover{text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-block;border:1.5px solid var(--fg);border-radius:99px;padding:10px 22px;font:600 14px inherit;font-family:inherit;text-decoration:none;background:none;color:var(--fg);cursor:pointer;transition:.2s}
+.btn:hover{background:var(--fg);color:var(--bg)}
+.btn.fill{background:var(--fg);color:var(--bg)}.btn.fill:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+#theme{width:42px;height:42px;padding:0;border-radius:50%}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero h1{text-align:right}
+.hero p.lead{max-width:360px;margin:28px 0 0 auto;text-align:right;font-size:15px}
+.chips{display:flex;gap:6px;justify-content:flex-end;margin:22px 0}
+.chips a{border:1.5px solid var(--fg);border-radius:99px;padding:4px 14px;font-size:13px;text-decoration:none}
+.chips a:hover{background:var(--fg);color:var(--bg)}
+.cta{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.photo{aspect-ratio:1/1.05;background:var(--acc);border-radius:56px 56px 56px 140px;display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 30px 60px -25px rgba(247,169,53,.6)}
+.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo span{font-size:150px;font-weight:900;letter-spacing:-.08em;color:#0a0a0a}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-bottom:64px}
+.facts div{border-top:1.5px solid var(--fg);padding-top:14px}
+.facts b{display:block;font-size:clamp(32px,5vw,56px);letter-spacing:-.05em;font-style:italic;line-height:1}
+.facts small{font-size:13px}
+.marquee{background:var(--dark);color:var(--on-dark);overflow:hidden;white-space:nowrap;padding:18px 0}
+.marquee div{display:inline-block;font-size:clamp(48px,8vw,100px);font-weight:800;letter-spacing:-.05em;animation:slide 22s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+section{padding:96px 0}
+.dark{background:var(--dark);color:var(--on-dark)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{margin-bottom:16px;max-width:520px}
+.blob{aspect-ratio:1;background:var(--acc);color:#000;border-radius:140px 56px 56px 56px;display:grid;place-items:center;text-align:center;padding:32px;font-size:clamp(24px,3.4vw,40px);font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.row{display:grid;grid-template-columns:1fr 2fr auto;gap:24px;align-items:center;padding:26px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row h3{font-size:24px;letter-spacing:-.03em;line-height:1.1}
+.row p{font-size:15px;opacity:.85}
+.tag{border:1.5px solid currentColor;border-radius:99px;padding:5px 14px;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border-radius:36px 36px 36px 8px;padding:28px;min-height:190px;border:1px solid var(--line)}
+.card:nth-child(even){border-radius:36px 8px 36px 36px}
+.card h3{font-size:22px;letter-spacing:-.03em;margin-bottom:12px}
+.card li{font-size:14px;list-style:none;padding:6px 0;border-top:1px solid var(--line)}
+.card ul{padding:0}
+.ph{opacity:.6;font-style:italic}
+.thumb{aspect-ratio:16/10;border-radius:24px;background:var(--acc);margin-bottom:18px;display:grid;place-items:center;font-weight:900;font-size:44px;letter-spacing:-.06em;color:#000}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:36px;padding:20px}
+.pcard h3{font-size:22px;letter-spacing:-.03em}
+.pcard p{font-size:14px;margin:8px 0 14px}
+.pcard .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+form{display:grid;gap:14px;max-width:560px}
+label{font-size:14px;font-weight:600}
+input,textarea{width:100%;padding:14px 18px;border-radius:24px;border:1.5px solid var(--on-dark);background:transparent;color:var(--on-dark);font:inherit}
+input::placeholder,textarea::placeholder{color:var(--on-dark);opacity:.5}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact .btn{border-color:var(--on-dark);color:var(--on-dark)}
+.contact .btn:hover{background:var(--acc);color:#000;border-color:var(--acc)}
+#status{font-size:14px;min-height:22px}
+footer{padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .chips{margin:0}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:820px){
+ nav ul{display:none}nav .btn.fill{margin-left:auto}
+ .hero,.about,.contact{grid-template-columns:1fr}
+ .hero h1,.hero p.lead{text-align:left;margin-left:0}.chips,.cta{justify-content:flex-start}
+ .photo span{font-size:100px}
+ .grid{grid-template-columns:1fr}
+ .row{grid-template-columns:1fr;gap:8px}
+ .facts{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+ <a class="logo" href="#top" aria-label="Dhashni R home">dr.</a>
+ <ul><li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+ <button id="theme" class="btn" aria-label="Toggle dark and light theme">◐</button>
+ <a class="btn fill" href="#contact">Let's talk</a>
+</nav></div></header>
+
+<main id="top">
+<div class="wrap hero">
+ <div>
+  <h1>hi, I'm<br>dhashni.</h1>
+  <p class="lead">ECE student, technology enthusiast and aspiring innovator. I turn ideas into practical solutions to real-world problems.</p>
+  <div class="chips">
+   <!-- Replace # with your real profile links -->
+   <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">gh</a><a href="mailto:your-email@example.com" aria-label="Email">@</a>
+  </div>
+  <div class="cta">
+   <a class="btn fill" href="#projects">View my projects</a>
+   <a class="btn" href="resume.pdf" download>Download resume</a>
+  </div>
+ </div>
+ <div class="photo">
+  <span aria-hidden="true">DR</span>
+  <!-- Add your photo: <img src="photo.jpg" alt="Portrait of Dhashni R" loading="eager"> -->
+ </div>
+</div>
+
+<div class="wrap facts reveal">
+ <div><b>B.E. ECE</b><small>M. Kumarasamy College of Engineering, Karur</small></div>
+ <div><b>24 hrs</b><small>Hackathon at KPR Institute of Engineering and Technology</small></div>
+ <div><b>PSG Tech</b><small>Technical workshops attended</small></div>
+</div>
+
+<div class="marquee" aria-hidden="true"><div>about · about · about · about · about · about · about · about · about · about · about · about ·&nbsp;</div></div>
+
+<section id="about" class="dark"><div class="wrap about">
+ <div class="blob reveal">learn.<br>build.<br>repeat.</div>
+ <div class="reveal">
+  <h2>about</h2>
+  <p>I'm a Bachelor of Engineering student in Electronics and Communication Engineering at M. Kumarasamy College of Engineering, Karur. I love learning how things work and using that knowledge to solve problems around me.</p>
+  <p>I enjoy teamwork and clear thinking under pressure. I put both to use in a 24-hour hackathon at KPR Institute of Engineering and Technology, and I've built practical understanding through technical workshops at PSG Tech.</p>
+  <p>I'm looking for internships, hackathons and technical events where I can keep growing.</p>
+ </div>
+</div></section>
+
+<section id="education"><div class="wrap reveal">
+ <h2>education</h2>
+ <div class="row"><span class="tag">20XX – Present</span><div><h3>Bachelor of Engineering, ECE</h3><p>M. Kumarasamy College of Engineering, Karur</p></div><span class="tag">Pursuing</span></div>
+ <div class="row"><span class="tag">20XX – 20XX</span><div><h3>Higher Secondary Education</h3><p>SVV Higher Secondary School, Trichy</p></div><span class="tag">Completed</span></div>
+</div></section>
+
+<section id="skills" class="dark"><div class="wrap reveal">
+ <h2>skills</h2>
+ <p class="ph" style="margin:-16px 0 28px">Edit each list with the skills you actually have.</p>
+ <div class="grid">
+  <div class="card"><h3>Programming</h3><ul><li class="ph">Add language</li><li class="ph">Add language</li></ul></div>
+  <div class="card"><h3>Electronics &amp; embedded</h3><ul><li class="ph">Add skill</li><li class="ph">Add skill</li></ul></div>
+  <div class="card"><h3>Hardware &amp; circuit design</h3><ul><li class="ph">Add tool</li><li class="ph">Add tool</li></ul></div>
+  <div class="card"><h3>IoT</h3><ul><li class="ph">Add skill</li><li class="ph">Add skill</li></ul></div>
+  <div class="card"><h3>Communication systems</h3><ul><li class="ph">Add topic</li><li class="ph">Add topic</li></ul></div>
+  <div class="card"><h3>Problem solving &amp; teamwork</h3><ul><li>Collaborative problem solving</li><li class="ph">Add skill</li></ul></div>
+ </div>
+</div></section>
+
+<section id="projects"><div class="wrap reveal">
+ <h2>portfolio</h2>
+ <div class="grid" id="project-list"></div>
+</div></section>
+
+<section id="experience" class="dark"><div class="wrap reveal">
+ <h2>experience</h2>
+ <div class="row"><span class="tag">24 hours</span><div><h3>Hackathon, KPR Institute of Engineering and Technology</h3><p>Took part in an intensive 24-hour hackathon and gained exposure to collaborative problem solving and innovation. <span class="ph">Add project name and result.</span></p></div><span class="tag">Participant</span></div>
+ <div class="row"><span class="tag">Workshops</span><div><h3>Technical workshops, PSG Tech</h3><p>Built exposure to practical concepts and emerging technologies. <span class="ph">Add workshop titles.</span></p></div><span class="tag">Attendee</span></div>
+</div></section>
+
+<section id="certs"><div class="wrap reveal">
+ <h2>certificates</h2>
+ <div class="grid">
+  <div class="card"><h3>PSG Tech workshop</h3><p class="ph">Add certificate image or link</p></div>
+  <div class="card"><h3>KPR hackathon</h3><p class="ph">Add certificate image or link</p></div>
+  <div class="card"><h3>Technical course</h3><p class="ph">Add certificate image or link</p></div>
+ </div>
+</div></section>
+
+<section id="contact" class="dark"><div class="wrap contact reveal">
+ <div>
+  <h2>let's<br>connect.</h2>
+  <p>Have an idea or opportunity? Let's connect!</p>
+  <div class="chips" style="justify-content:flex-start;margin-top:24px">
+   <a class="btn" href="mailto:your-email@example.com">your-email@example.com</a>
+   <a class="btn" href="#">LinkedIn</a><a class="btn" href="#">GitHub</a>
+  </div>
+ </div>
+ <!-- Create a free form at formspree.io and paste your endpoint below -->
+ <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <div><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+  <div><label for="e">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+  <div><label for="m">Message</label><textarea id="m" name="message" rows="5" required></textarea></div>
+  <button class="btn" style="justify-self:start" type="submit">Send message</button>
+  <p id="status" role="status"></p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <span>Designed with passion by Dhashni R</span>
+ <div class="chips"><a href="#">in</a><a href="#">gh</a><a href="mailto:your-email@example.com">@</a></div>
+ <a class="btn" href="#top">Back to top ↑</a>
+</div></footer>
+
+<script>
+// Add new projects here; the grid updates automatically.
+const projects=[
+ {title:"Project title",desc:"Short description of what it does and what you learned.",tech:["Tech 1","Tech 2"],link:"",image:""},
+ {title:"Project title",desc:"Short description of what it does and what you learned.",tech:["Tech 1","Tech 2"],link:"",image:""},
+ {title:"Project title",desc:"Short description of what it does and what you learned.",tech:["Tech 1","Tech 2"],link:"",image:""}
+];
+const list=document.getElementById('project-list');
+projects.forEach(p=>{
+ const el=document.createElement('article');el.className='pcard';
+ const img=p.image?`<img class="thumb" style="width:100%;object-fit:cover" loading="lazy" src="${p.image}" alt="${p.title}">`:`<div class="thumb" aria-hidden="true">${p.title[0]}</div>`;
+ el.innerHTML=`${img}<h3>${p.title}</h3><p>${p.desc}</p><div class="tags">${p.tech.map(t=>`<span class="tag">${t}</span>`).join('')}</div>${p.link?`<a class="btn" href="${p.link}" target="_blank" rel="noopener">View project</a>`:`<span class="tag ph">Link coming soon</span>`}`;
+ list.appendChild(el);
+});
+// Theme
+const root=document.documentElement;
+try{const s=localStorage.getItem('theme');if(s)root.dataset.theme=s}catch(e){}
+document.getElementById('theme').onclick=()=>{
+ const t=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=t;
+ try{localStorage.setItem('theme',t)}catch(e){}
+};
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Contact form (needs a real Formspree endpoint to deliver)
+const f=document.getElementById('contact-form'),st=document.getElementById('status');
+f.addEventListener('submit',async e=>{
+ e.preventDefault();
+ if(f.action.includes('YOUR_FORM_ID')){st.textContent='Add your Formspree form ID in index.html to enable sending.';return}
+ st.textContent='Sending...';
+ try{
+  const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+  if(r.ok){st.textContent='Message sent. Thank you!';f.reset()}else throw 0;
+ }catch(_){st.textContent='Could not send. Please email me directly.'}
+});
+</script>
+</body>
+</html>
